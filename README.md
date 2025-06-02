@@ -1,11 +1,15 @@
 # QuickScan
 
+https://github.com/user-attachments/assets/64302c37-e0eb-4c2a-b940-8155ba927153
+
+
+
+
 A modern document scanning and AI-powered analysis app with secure user authentication.
 
 ## ✨ Features
 
 ### 🔐 Authentication System
-- **Email & Password Authentication** - Secure user registration and login
 - **API Token Authentication** - Quick access with pre-configured demo tokens
 - **JWT Security** - Industry-standard token-based authentication
 - **Modern UI** - Beautiful login/register screens with dual authentication modes
@@ -122,7 +126,7 @@ For quick testing, use these pre-configured tokens:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 ## 🙋‍♂️ Support
 
