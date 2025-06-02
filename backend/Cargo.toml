@@ -1,0 +1,40 @@
+[package]
+name = "quickscan-backend"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = { version = "0.7", features = ["multipart"] }
+tokio = { version = "1.0", features = ["full"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "fs", "trace"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+anyhow = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+# JSON Schema validation
+validator = { version = "0.18", features = ["derive"] }
+garde = { version = "0.20", features = ["derive"] }
+regex = "1.0"
+# HTTP client for OpenAI API
+reqwest = { version = "0.12", features = ["json"] }
+# Configuration management
+config = "0.14"
+# Additional error handling
+thiserror = "1.0"
+# Environment variables from .env files
+dotenvy = "0.15"
+# File storage dependencies
+base64 = "0.22"
+mime = "0.3"
+tempfile = "3.8"
+tokio-util = { version = "0.7", features = ["io"] }
+futures-util = "0.3"
+# Authentication dependencies
+jsonwebtoken = "9.3"
+bcrypt = "0.15"
+# In-memory user storage (replace with database in production)
+dashmap = "5.5"
