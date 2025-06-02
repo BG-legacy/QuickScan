@@ -1,258 +1,135 @@
-# QuickScan iOS App
+# QuickScan
 
-A beautiful, modern iOS application built with SwiftUI that allows users to scan documents and get AI-powered summaries.
+https://github.com/user-attachments/assets/64302c37-e0eb-4c2a-b940-8155ba927153
+
+A modern document scanning and AI-powered analysis app with secure user authentication.
 
 ## Features
 
-### 📱 **Clean SwiftUI Design**
-- Modern, intuitive interface that adapts to both light and dark modes
-- Smooth animations and transitions
-- Accessibility-focused design
+### Authentication System
+- API Token Authentication - Quick access with pre-configured demo tokens
+- JWT Security - Industry-standard token-based authentication
+- Modern UI - Beautiful login/register screens with dual authentication modes
 
-### 📄 **Document Input Methods**
-- **Camera Scanner**: Built-in document scanner using VisionKit
-- **File Picker**: Select files from device storage (PDF, images, text files)
+### Document Processing
+- Camera Scanning - Use your device camera to scan documents
+- File Upload - Choose files from your device storage
+- AI Analysis - OpenAI-powered document analysis and summarization
+- Cloud Storage - Secure file storage with download capabilities
 
-### 🤖 **AI-Powered Summarization**
-- Real-time text summarization using the QuickScan backend API
-- Compression statistics and analysis
-- Shareable summaries
+### User Experience
+- Responsive Design - Works beautifully on all screen sizes
+- Smooth Animations - Polished transitions and loading states
+- Accessibility - Screen reader compatible with proper semantic labels
 
-### 🎨 **Modern UI/UX**
-- Gradient backgrounds and button styles
-- Loading animations with progress indicators
-- Error handling with retry functionality
-- Responsive design for iPhone and iPad
+## Quick Start
 
-### 🌓 **Dark Mode Support**
-- Fully compatible with iOS light and dark mode
-- Automatic theme switching
-- Consistent visual experience across modes
+### Prerequisites
+- Backend: Rust 1.70+ and Cargo
+- Frontend: Xcode 15+ and iOS 16+
+- Optional: OpenAI API key for AI features
+
+### Backend Setup
+```bash
+# Start the backend server using Cargo (Rust's package manager)
+cd backend
+cargo run
+```
+
+### Frontend Setup
+1. Open `frontend/QuickScan.xcodeproj` in Xcode
+2. Run the app on simulator or device
+
+### Authentication Demo
+1. Launch the app
+2. Choose "API Token" authentication mode
+3. Use one of these demo tokens:
+   - `quickscan-api-token-2024`
+   - `demo-token-12345`
+   - `test-api-key-abcdef`
+4. Or register with email/password for full functionality
+
+## Documentation
+
+- [Authentication Guide](AUTHENTICATION.md) - Complete authentication system documentation
+- [API Reference](docs/api.md) - Backend API endpoints and examples
+- [Frontend Architecture](docs/frontend.md) - iOS app structure and components
+
+## Technology Stack
+
+### Backend (Rust)
+- Axum - Modern async web framework
+- JWT - JSON Web Token authentication
+- bcrypt - Secure password hashing
+- OpenAI API - AI-powered document analysis
+- Serde - JSON serialization/deserialization
+
+### Frontend (Swift/SwiftUI)
+- SwiftUI - Declarative UI framework
+- Vision Kit - Document scanning capabilities
+- Combine - Reactive programming for data flow
+- URLSession - Network communication
+
+## Security Features
+
+- Password Hashing - bcrypt with configurable cost
+- JWT Tokens - Secure token-based authentication
+- Input Validation - Server-side validation with detailed error messages
+- CORS Protection - Configured for secure cross-origin requests
+- Token Expiration - Automatic token refresh and re-authentication
+
+## API Endpoints
+
+### Authentication
+- `POST /api/auth/register` - Register new user
+- `POST /api/auth/login` - Login with credentials
+- `POST /api/auth/token` - Authenticate with API token
+- `GET /api/auth/me` - Get current user info
+
+### Document Processing
+- `POST /api/upload` - Upload and process documents
+- `POST /api/summarize` - AI-powered document summarization
+- `GET /api/files` - List uploaded files
+- `DELETE /api/files/:id` - Delete files
+
+### Health & Monitoring
+- `GET /api/health` - Service health check
+
+## Demo Credentials
+
+For quick testing, use these pre-configured tokens:
+- `quickscan-api-token-2024` - Full access demo token
+- `demo-token-12345` - Standard demo token  
+- `test-api-key-abcdef` - Testing token
 
 ## Screenshots
 
-### Main Interface
-- Clean welcome screen with feature highlights
-- Prominent action buttons for scanning and file selection
-- Beautiful gradient designs and SF Symbols
+*Coming soon - Login screen, main interface, and document scanning views*
 
-### Document Processing
-- Animated loading states during upload and processing
-- Progress feedback for user actions
-- Professional error handling with retry options
+## Development Workflow
 
-### Summary Results
-- Elegant summary display with statistics
-- Expandable original content view
-- Share functionality for summaries
+1. Start Backend: `cd backend && cargo run`
+2. Open Frontend: Launch Xcode project
+3. Test Authentication: Use demo tokens or register new user
+4. Scan Documents: Test camera scanning and file upload
+5. AI Analysis: Verify summarization with OpenAI integration
 
-## Technical Stack
+## Contributing
 
-### **SwiftUI Framework**
-- Native iOS development with SwiftUI
-- Declarative UI programming
-- MVVM architecture pattern
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
-### **Key Dependencies**
-- **VisionKit**: Document scanning functionality
-- **UniformTypeIdentifiers**: File type handling
-- **Foundation**: Core networking and data handling
+## License
 
-### **API Integration**
-- RESTful API communication with QuickScan backend
-- Async/await networking patterns
-- Proper error handling and response parsing
 
-## Project Structure
 
-```
-QuickScan/
-├── QuickScanApp.swift          # App entry point
-├── ContentView.swift           # Main app coordinator
-├── Models/
-│   └── Models.swift           # Data models and API response types
-├── Services/
-│   └── APIService.swift       # Backend API communication
-├── Views/
-│   ├── DocumentScannerView.swift    # Camera document scanning
-│   ├── FilePickerView.swift         # File selection interface
-│   ├── SummaryResultsView.swift     # AI summary display
-│   ├── LoadingView.swift            # Animated loading states
-│   └── ErrorView.swift              # Error handling UI
-└── Assets.xcassets/           # App icons and visual assets
-```
+## Support
 
-## Key Components
+For questions, issues, or feature requests, please open an issue on GitHub or contact the development team.
 
-### **APIService**
-- Singleton service for backend communication
-- Handles file uploads, text summarization, and error management
-- Built with modern async/await patterns
+---
 
-### **ContentView**
-- Main app coordinator managing application state
-- Orchestrates navigation between different views
-- Handles file processing workflow
-
-### **Document Scanner**
-- Native VisionKit integration for document scanning
-- Multi-page document support
-- Automatic image processing and optimization
-
-### **File Picker**
-- Universal document picker supporting multiple file types
-- Security-scoped resource access
-- Type validation and error handling
-
-### **Summary Display**
-- Beautiful results presentation with statistics
-- Expandable content sections
-- Native sharing capabilities
-
-## Backend Integration
-
-The app communicates with the QuickScan Rust backend API:
-
-### **Endpoints Used**
-- `POST /api/upload` - File upload
-- `POST /api/summarize` - Text summarization
-- `GET /api/health` - Server health check
-
-### **Data Flow**
-1. User selects document (camera or file picker)
-2. File is uploaded to backend server
-3. Text content is extracted and sent for summarization
-4. AI-generated summary is displayed with statistics
-
-## Requirements
-
-### **iOS Version**
-- iOS 17.0 or later
-- iPhone and iPad compatible
-
-### **Xcode**
-- Xcode 15.0 or later
-- Swift 5.9+
-
-### **Permissions**
-- Camera access for document scanning
-- Photo library access for file selection
-
-## Setup Instructions
-
-### **1. Open Project**
-```bash
-open QuickScan.xcodeproj
-```
-
-### **2. Configure Backend URL**
-Update the `baseURL` in `APIService.swift` to point to your backend:
-```swift
-private let baseURL = "http://your-backend-url:3000/api"
-```
-
-### **3. Build and Run**
-- Select your target device or simulator
-- Press Cmd+R to build and run
-
-## Features in Detail
-
-### **Document Scanning**
-- Uses Apple's VisionKit framework for professional document scanning
-- Automatic edge detection and perspective correction
-- Multi-page document support
-- High-quality image capture
-
-### **File Selection**
-- Support for multiple file types: PDF, images, text files, Word documents
-- Native iOS document picker integration
-- Secure file access with proper permission handling
-
-### **AI Summarization**
-- Real-time text summarization via backend API
-- Compression statistics showing original vs. summary length
-- Percentage reduction calculation
-- Professional error handling for API failures
-
-### **User Experience**
-- Smooth animations and transitions
-- Loading states with progress feedback
-- Error recovery with retry functionality
-- Share functionality for summaries
-- Dark mode compatibility
-
-## Error Handling
-
-The app includes comprehensive error handling:
-
-### **Network Errors**
-- Connection timeout handling
-- Server error response parsing
-- User-friendly error messages
-
-### **File Processing Errors**
-- Invalid file type detection
-- File size limit validation
-- Permission denial handling
-
-### **UI Error States**
-- Animated error displays
-- Retry functionality
-- Graceful degradation
-
-## Accessibility
-
-The app is built with accessibility in mind:
-
-### **VoiceOver Support**
-- Proper accessibility labels and hints
-- Logical navigation order
-- Dynamic type support
-
-### **Visual Accessibility**
-- High contrast support
-- Respect for user font size preferences
-- Clear visual hierarchy
-
-## Performance Optimization
-
-### **Memory Management**
-- Efficient image handling and compression
-- Proper disposal of large data objects
-- Optimized networking with URLSession
-
-### **UI Performance**
-- Smooth animations with optimized view updates
-- Lazy loading for large content
-- Efficient state management
-
-## Future Enhancements
-
-### **Planned Features**
-- OCR integration for better text extraction
-- Multiple language support
-- Document history and storage
-- Advanced AI features (Q&A, translation)
-- Offline mode capabilities
-
-### **Technical Improvements**
-- Unit test coverage
-- CI/CD integration
-- Performance monitoring
-- Crash reporting
-
-## Development Notes
-
-### **Architecture Decisions**
-- **MVVM Pattern**: Clear separation of concerns
-- **Async/Await**: Modern networking patterns
-- **SwiftUI**: Declarative, reactive UI framework
-- **Single Responsibility**: Each view has a focused purpose
-
-### **Code Quality**
-- Comprehensive documentation
-- Consistent naming conventions
-- Error handling throughout
-- Preview support for all views
-
-This iOS app provides a polished, professional experience for document scanning and AI-powered summarization, showcasing modern iOS development practices and beautiful SwiftUI design. 
+**QuickScan** - Secure document scanning with AI-powered analysis 

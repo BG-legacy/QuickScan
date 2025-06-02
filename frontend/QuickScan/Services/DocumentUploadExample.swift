@@ -4,6 +4,7 @@ import UIKit
 
 /// Comprehensive examples showing how to use the new uploadDocument functionality
 /// This file demonstrates various document upload scenarios using URLSession
+// DocumentUploadExample demonstrates various document upload scenarios and usage patterns for the APIService.
 class DocumentUploadExample {
     
     private let apiService = APIService.shared

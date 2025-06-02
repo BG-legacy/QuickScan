@@ -1,5 +1,6 @@
 import SwiftUI
 
+// LoadingView displays an animated loading indicator and message while background tasks are running.
 struct LoadingView: View {
     let message: String
     @State private var isAnimating = false

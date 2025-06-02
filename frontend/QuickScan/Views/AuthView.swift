@@ -1,5 +1,6 @@
 import SwiftUI
 
+// AuthView provides the user interface for login, registration, and API token authentication.
 struct AuthView: View {
     @StateObject private var authService = AuthService.shared
     @State private var loginMode: LoginMode = .emailPassword

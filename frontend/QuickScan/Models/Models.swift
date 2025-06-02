@@ -226,4 +226,6 @@ enum APIServiceError: LocalizedError {
 enum LoginMode {
     case emailPassword
     case token
-} 
+}
+
+// Models.swift defines all data models, API response types, and enums used throughout the QuickScan app. 

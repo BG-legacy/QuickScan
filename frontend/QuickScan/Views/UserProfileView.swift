@@ -1,5 +1,6 @@
 import SwiftUI
 
+// UserProfileView displays the current user's profile information and provides sign-out functionality.
 struct UserProfileView: View {
     @StateObject private var authService = AuthService.shared
     @Environment(\.presentationMode) var presentationMode

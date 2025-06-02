@@ -2,6 +2,7 @@ import Foundation
 import SwiftUI
 import UIKit
 
+// APIService handles all network communication with the backend API, including file upload, authentication, and AI features.
 @MainActor
 class APIService: ObservableObject {
     static let shared = APIService()

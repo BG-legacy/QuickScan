@@ -1,7 +1,7 @@
 import Foundation
 import Security
 
-/// A manager class for securely storing and retrieving data from the iOS Keychain
+/// KeychainManager provides secure storage and retrieval of sensitive data (like JWT tokens) using the iOS Keychain.
 class KeychainManager {
     static let shared = KeychainManager()
     

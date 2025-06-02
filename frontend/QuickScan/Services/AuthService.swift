@@ -1,6 +1,7 @@
 import Foundation
 import SwiftUI
 
+// AuthService manages user authentication, token storage, and user session state for the app.
 @MainActor
 class AuthService: ObservableObject {
     static let shared = AuthService()

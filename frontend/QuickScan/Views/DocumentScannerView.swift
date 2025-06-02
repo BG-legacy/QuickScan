@@ -1,6 +1,7 @@
 import SwiftUI
 import VisionKit
 
+// DocumentScannerView presents the iOS document camera for scanning documents and returns the scanned images.
 struct DocumentScannerView: UIViewControllerRepresentable {
     let onCompletion: ([UIImage]) -> Void
     @Environment(\.dismiss) private var dismiss

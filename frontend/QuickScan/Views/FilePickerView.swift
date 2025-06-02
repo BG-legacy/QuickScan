@@ -1,6 +1,7 @@
 import SwiftUI
 import UniformTypeIdentifiers
 
+// FilePickerView presents a document picker for selecting files from the user's device and returns the file data and name.
 struct FilePickerView: UIViewControllerRepresentable {
     let onFileSelected: (Data, String) -> Void
     @Environment(\.dismiss) private var dismiss

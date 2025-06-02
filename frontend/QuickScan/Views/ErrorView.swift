@@ -1,5 +1,6 @@
 import SwiftUI
 
+// ErrorView displays an error message and provides retry and dismiss actions for error handling in the app.
 struct ErrorView: View {
     let message: String
     let onRetry: () -> Void

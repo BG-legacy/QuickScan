@@ -7,25 +7,25 @@ https://github.com/user-attachments/assets/64302c37-e0eb-4c2a-b940-8155ba927153
 
 A modern document scanning and AI-powered analysis app with secure user authentication.
 
-## ✨ Features
+## Features
 
-### 🔐 Authentication System
+### Authentication System
 - **API Token Authentication** - Quick access with pre-configured demo tokens
 - **JWT Security** - Industry-standard token-based authentication
 - **Modern UI** - Beautiful login/register screens with dual authentication modes
 
-### 📱 Document Processing
+### Document Processing
 - **Camera Scanning** - Use your device camera to scan documents
 - **File Upload** - Choose files from your device storage
 - **AI Analysis** - OpenAI-powered document analysis and summarization
 - **Cloud Storage** - Secure file storage with download capabilities
 
-### 🎨 User Experience
+### User Experience
 - **Responsive Design** - Works beautifully on all screen sizes
 - **Smooth Animations** - Polished transitions and loading states
 - **Accessibility** - Screen reader compatible with proper semantic labels
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - **Backend**: Rust 1.70+ and Cargo
@@ -51,13 +51,13 @@ cargo run
    - `test-api-key-abcdef`
 4. Or register with email/password for full functionality
 
-## 📚 Documentation
+## Documentation
 
 - [**Authentication Guide**](AUTHENTICATION.md) - Complete authentication system documentation
 - [**API Reference**](docs/api.md) - Backend API endpoints and examples
 - [**Frontend Architecture**](docs/frontend.md) - iOS app structure and components
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Backend (Rust)
 - **Axum** - Modern async web framework
@@ -72,7 +72,7 @@ cargo run
 - **Combine** - Reactive programming for data flow
 - **URLSession** - Network communication
 
-## 🔒 Security Features
+## Security Features
 
 - **Password Hashing** - bcrypt with configurable cost
 - **JWT Tokens** - Secure token-based authentication
@@ -80,7 +80,7 @@ cargo run
 - **CORS Protection** - Configured for secure cross-origin requests
 - **Token Expiration** - Automatic token refresh and re-authentication
 
-## 🎯 API Endpoints
+## API Endpoints
 
 ### Authentication
 - `POST /api/auth/register` - Register new user
@@ -97,18 +97,18 @@ cargo run
 ### Health & Monitoring
 - `GET /api/health` - Service health check
 
-## 🌟 Demo Credentials
+## Demo Credentials
 
 For quick testing, use these pre-configured tokens:
 - `quickscan-api-token-2024` - Full access demo token
 - `demo-token-12345` - Standard demo token  
 - `test-api-key-abcdef` - Testing token
 
-## 📱 Screenshots
+## Screenshots
 
 *Coming soon - Login screen, main interface, and document scanning views*
 
-## 🔄 Development Workflow
+## Development Workflow
 
 1. **Start Backend**: `cd backend && cargo run`
 2. **Open Frontend**: Launch Xcode project
@@ -116,7 +116,7 @@ For quick testing, use these pre-configured tokens:
 4. **Scan Documents**: Test camera scanning and file upload
 5. **AI Analysis**: Verify summarization with OpenAI integration
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -124,14 +124,14 @@ For quick testing, use these pre-configured tokens:
 4. Add tests if applicable
 5. Submit a pull request
 
-## 📄 License
+## License
 
 
 
-## 🙋‍♂️ Support
+## Support
 
 For questions, issues, or feature requests, please open an issue on GitHub or contact the development team.
 
 ---
 
-**QuickScan** - Secure document scanning with AI-powered analysis 🚀
+**QuickScan** - Secure document scanning with AI-powered analysis

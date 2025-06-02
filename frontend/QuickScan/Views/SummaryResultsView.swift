@@ -1,5 +1,6 @@
 import SwiftUI
 
+// SummaryResultsView displays the AI-generated summary, statistics, and sharing options for a processed document.
 struct SummaryResultsView: View {
     let result: SummarizationResult
     let onDone: () -> Void

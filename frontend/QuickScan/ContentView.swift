@@ -2,6 +2,8 @@ import SwiftUI
 import VisionKit
 import PDFKit
 
+// QuickScan Main ContentView
+// This is the main entry point for the app's UI, handling navigation, state, and document processing.
 struct ContentView: View {
     @StateObject private var apiService = APIService.shared
     // TEMPORARY: Commenting out AuthService until it's added to the project target
